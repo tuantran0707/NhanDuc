@@ -1,0 +1,15 @@
+﻿export type Player = {
+  stt: number;
+  name: string;
+  number: number;
+  size?: string;
+  dob?: string;
+  position?: string;
+  squad?: 'san11' | 's7giai' | 's7noibo' | 'both';
+};
+
+// Du lieu cau thu Nhan Duc FC
+export const players: Player[] = [
+  { stt: 1,  name: "Van Nhan",                 number: 8,  position: "Truong doan",  squad: "san11" },
+  { stt: 2,  name: "Hoang Nguyen",              number: 68, position: "HLV" },
+  { stt: 3,  name: "Do Dat",                    number: 4,  position: "Tro ly HLV",  squad: "san11" },
