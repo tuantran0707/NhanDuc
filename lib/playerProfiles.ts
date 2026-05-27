@@ -1,0 +1,7 @@
+// Thông tin profile chi tiết cho các thành viên đặc biệt
+export const playerProfiles: Record<number, string> = {
+  8: `Bầu Văn Nhân thành lập đội bóng từ những năm 2015, với vốn kiến thức và sự đam mê nồng nhiệt với trái banh đã luôn thúc đẩy ông làm đội bóng càng ngày càng chuyên nghiệp và có tổ chức hơn, dù đã hơn 10 năm nhưng đội bóng dưới tay bầu Văn Nhân vẫn là đội bóng có tiếng ở Đà Nẵng`,
+  7: `Là phó bầu của đội kiêm Giám Đốc Truyền Thông của đội, đồng thời cũng là một cầu thủ năng nổ và đạt hiệu suất cao trên sân. Tuy nhiên anh lại luôn phải dính vào những scandal liên quan đến việc bị cầu thủ đội nhà trêu chọc sau những pha bỏ lỡ, những pha xử lý và làm bàn bất ngờ.\nLà cầu thủ rất nhiệt huyết đồng thời cũng như rất năng nổ trên sân, là 1 fan cứng của CR7 nữa nên tinh thần thi đấu cực kỳ nhiệt tình của mình. Ngoài ra Phước Classic còn rất nổi tiếng trong giới truyền thông khi luôn được cánh báo chí săn đón, gương mặt anh luôn rất nổi tiếng và xuất hiện liên tục trên Facebook`,
+  68: `Là cầu thủ luôn được gọi là "Bố" khi tuổi đời của chú Hoàng năm nay đã gần 6x nhưng bố vẫn cực kỳ tâm huyết với bóng đá, là HLV kiêm người dẫn dắt tinh thần của đàn con, luôn đưa ra những chiến thuật cực kỳ sắc bén ngoài ra Bố già nhưng bố vẫn rất gân khi vẫn chiến thoải mái sân 11`,
+  4: `Là HLV son nhất của đội, chỉ cần có vía của HLV Đỗ Đạt thì mặc định sẽ là 1 bàn thắng cho Nhân Đức FC, là HLV nhưng đồng thời cũng là hậu vệ cực kỳ kinh nghiệm. Cầu thủ đã gắn bó với Nhân Đức FC từ những ngày đầu tiên`
+};
