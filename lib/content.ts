@@ -289,6 +289,27 @@ export const editorialPosts: EditorialPost[] = [
       "/S7-ThienNguyen/2aOboQYucFJqMUV8e4Kesuf8eKWxQ5Ydtqv6IT5c.jpg",
       "/S7-ThienNguyen/2aOboQYucFVDolZ4cHo3gfI17WnsuTCd50siOKWm.jpg"
     ]
+  },
+  {
+    slug: "tran-quyet-dinh-voi-dien-lanh-dai-loc-2026",
+    title: "Trận quyết định với Điện Lạnh Đại Lộc FC: thắng là điều bắt buộc",
+    summary:
+      "Nhân Đức FC bước vào lượt cuối bảng A với áp lực phải thắng để giành vé đi tiếp sau 2 trận trái ngược 0-2 trước Dần FC và 7-0 trước Ghiền FC.",
+    highlights: [
+      "Trận đấu diễn ra lúc 16h00 ngày 31/05/2026 tại Sân Hòa Xuân, đối thủ là Điện Lạnh Đại Lộc FC.",
+      "Sau chiến thắng 7-0 trước Ghiền FC nhưng thất bại 0-2 trước Dần FC, Nhân Đức FC buộc phải thắng ở lượt cuối để tự quyết cơ hội đi tiếp."
+    ],
+    body: [
+      "Giải Sân 11 Thiện Nguyện 2026 đang đi đến thời khắc then chốt với Nhân Đức FC. Sau 2 lượt trận, đội bóng có cùng 3 điểm với Dần FC nhưng vẫn phải cạnh tranh quyết liệt cho tấm vé vào vòng trong.",
+      "Chiến thắng 7-0 trước Ghiền FC cho thấy sức tấn công bùng nổ và tinh thần toàn đội đang lên rất cao. Tuy nhiên, trận thua 0-2 trước Dần FC khiến Nhân Đức FC không còn đường lùi ở vòng đấu cuối.",
+      "Trước đối thủ mạnh là Điện Lạnh Đại Lộc FC, mục tiêu của Nhân Đức FC là giành trọn 3 điểm. Đây sẽ là trận đấu bản lĩnh, nơi mọi cầu thủ phải giữ được sự tập trung, kỷ luật chiến thuật và khát khao chiến thắng đến phút cuối cùng."
+    ],
+    date: "2026-05-27",
+    cover: "/S11-ThienNguyen/LichThiDau-LuotTran3.jpg",
+    images: [
+      "/S11-ThienNguyen/LichThiDau-LuotTran3.jpg",
+      "/S11-ThienNguyen/BXH.jpg"
+    ]
   }
 ];
 
@@ -336,8 +357,8 @@ export const ongoingTournaments: TournamentCard[] = [
     description: "Đang thi đấu vòng bảng, đã có BXH và kết quả 2 lượt trận của Nhân Đức FC.",
     cover: "/S11-ThienNguyen/BXH.jpg",
     gallery: [
-      "/S11-ThienNguyen/BXH.jpg",
-      "/S11-ThienNguyen/LichThiDau-LuotTran3.jpg"
+      "/S11-ThienNguyen/LichThiDau-LuotTran3.jpg",
+      "/S11-ThienNguyen/BXH.jpg"
     ],
     standings: [
       {
@@ -390,7 +411,7 @@ export const ongoingTournaments: TournamentCard[] = [
       "NHÂN ĐỨC FC 7-0 GHIỀN FC (Sân Hòa Xuân - 24/5/2026)"
     ],
     schedule: [
-      "NHÂN ĐỨC FC vs ĐIỆN LẠNH ĐẠI LỘC FC (Chưa thi đấu)"
+      "16h00 - Sân Hòa Xuân - 31/05/2026: NHÂN ĐỨC FC vs ĐIỆN LẠNH ĐẠI LỘC FC"
     ],
     playedFixtures: [
       {
@@ -416,7 +437,8 @@ export const ongoingTournaments: TournamentCard[] = [
       {
         home: "Nhân Đức FC",
         away: "Điện Lạnh Đại Lộc FC",
-        date: "Chưa thi đấu",
+        date: "16:00 - 31/05/2026",
+        venue: "Sân Hòa Xuân",
         status: "upcoming"
       }
     ],
