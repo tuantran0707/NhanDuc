@@ -41,28 +41,33 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="card bg-white p-6 text-brand-dark shadow-xl border border-white/40 md:translate-y-10">
-            <div className="text-sm uppercase tracking-wider text-brand-gold">Trận đấu gần nhất</div>
-            <div className="mt-3 text-sm text-gray-600">{latestMatch.competition} · {latestMatch.date}</div>
-            <div className="mt-4 grid grid-cols-3 items-center text-center">
-              <div className="font-semibold text-brand-dark flex items-center justify-end gap-2 pr-2">
-                <span>{latestMatch.home}</span>
-                <Image src={resolveClubLogo(latestMatch.home)} alt={latestMatch.home} width={28} height={28} className="w-7 h-7 rounded-full object-cover border border-gray-200" />
-              </div>
-              <div className="text-4xl font-black text-brand-gold">
-                {latestMatch.homeScore} - {latestMatch.awayScore}
-              </div>
-              <div className="font-semibold text-brand-dark flex items-center justify-start gap-2 pl-2">
-                <Image src={resolveClubLogo(latestMatch.away)} alt={latestMatch.away} width={28} height={28} className="w-7 h-7 rounded-full object-cover border border-gray-200" />
-                <span>{latestMatch.away}</span>
-              </div>
-            </div>
-            {latestMatch.venue && (
-              <div className="mt-3 text-center text-xs text-gray-500">Sân: {latestMatch.venue}</div>
-            )}
-          </div>
+          {/* Card trận đấu gần nhất đã được di chuyển xuống dưới */}
         </div>
       </section>
+
+      {/* Card trận đấu gần nhất */}
+      <div className="container-page flex justify-center mt-[-60px] z-10 relative">
+        <div className="card bg-white p-6 text-brand-dark shadow-xl border border-white/40 max-w-xl w-full">
+          <div className="text-sm uppercase tracking-wider text-brand-gold">Trận đấu gần nhất</div>
+          <div className="mt-3 text-sm text-gray-600">{latestMatch.competition} · {latestMatch.date}</div>
+          <div className="mt-4 grid grid-cols-3 items-center text-center">
+            <div className="font-semibold text-brand-dark flex items-center justify-end gap-2 pr-2">
+              <span>{latestMatch.home}</span>
+              <Image src={resolveClubLogo(latestMatch.home)} alt={latestMatch.home} width={28} height={28} className="w-7 h-7 rounded-full object-cover border border-gray-200" />
+            </div>
+            <div className="text-4xl font-black text-brand-gold">
+              {latestMatch.homeScore} - {latestMatch.awayScore}
+            </div>
+            <div className="font-semibold text-brand-dark flex items-center justify-start gap-2 pl-2">
+              <Image src={resolveClubLogo(latestMatch.away)} alt={latestMatch.away} width={28} height={28} className="w-7 h-7 rounded-full object-cover border border-gray-200" />
+              <span>{latestMatch.away}</span>
+            </div>
+          </div>
+          {latestMatch.venue && (
+            <div className="mt-3 text-center text-xs text-gray-500">Sân: {latestMatch.venue}</div>
+          )}
+        </div>
+      </div>
 
       {/* News / Blog */}
       <section className="container-page py-14">
