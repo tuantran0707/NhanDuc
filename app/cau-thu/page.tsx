@@ -1,55 +1,7 @@
 
-import { players, positionGroups, groupKey } from "@/lib/players";
-import Image from "next/image";
-import { readdir } from "fs/promises";
-import path from "path";
-import dynamic from "next/dynamic";
-import { playerProfiles } from "@/lib/playerProfiles";
-const PlayerProfile = dynamic(() => import("@/components/PlayerProfile"), { ssr: false });
+import Link from "next/link";
 
 export const metadata = { title: "Cầu Thủ - Nhân Đức FC" };
-
-function toPlayerFolderName(name: string, number: number): string {
-  const normalized = name
-    .replace(/đ/g, "d")
-    .replace(/Đ/g, "D")
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/[^A-Za-z0-9]/g, "");
-  return `${normalized}-${number}`;
-}
-
-async function getPlayerPhotoMap() {
-  const allowed = new Set([".jpg", ".jpeg", ".png", ".webp"]);
-  const root = path.join(process.cwd(), "public", "Player");
-  const map: Record<number, string> = {};
-
-  await Promise.all(
-    players.map(async (p) => {
-      const folder = toPlayerFolderName(p.name, p.number);
-      const folderPath = path.join(root, folder);
-      try {
-        const files = await readdir(folderPath, { withFileTypes: true });
-        const firstImage = files
-          .filter((f) => f.isFile())
-          .map((f) => f.name)
-          .find((fileName) => allowed.has(path.extname(fileName).toLowerCase()));
-
-        if (firstImage) {
-          map[p.stt] = `/Player/${folder}/${firstImage}`;
-        }
-      } catch {
-        // Bỏ qua thư mục chưa có ảnh hoặc chưa tồn tại.
-      }
-    })
-  );
-
-  return map;
-}
-
-import PlayerCard from "@/components/PlayerCard";
-
-import Link from "next/link";
 
 export default function PlayersPage() {
   return (
