@@ -49,7 +49,7 @@ export default function AboutPage() {
           </div>
           <div className="card p-5">
             <div className="text-sm text-gray-500">Năm thành lập</div>
-            <div className="font-bold text-lg">2018</div>
+            <div className="font-bold text-lg">2015</div>
           </div>
           <div className="card p-5">
             <div className="text-sm text-gray-500">Màu áo truyền thống</div>
