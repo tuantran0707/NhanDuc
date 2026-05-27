@@ -20,7 +20,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/80 via-brand-dark/50 to-brand-dark/22" />
         <div className="container-page relative py-16 md:py-24 grid md:grid-cols-2 gap-10 items-start">
           <div>
-            <span className="badge bg-brand-gold/20 text-brand-gold">CLB BÓNG ĐÁ PHONG TRÀO</span>
+            <span className="badge bg-brand-gold/20 text-white">CLB BÓNG ĐÁ PHONG TRÀO</span>
             <h1 className="mt-4 text-4xl md:text-5xl font-extrabold leading-tight">
               <span className="text-brand-green drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)]">
                 Nhân Đức FC
