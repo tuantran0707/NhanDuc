@@ -11,7 +11,7 @@ export type Player = {
 // Dữ liệu cầu thủ Nhân Đức FC (do CLB cung cấp)
 export const players: Player[] = [
   { stt: 1, name: "Văn Nhân", number: 8, position: "Trưởng đoàn", squad: "san11" },
-  { stt: 2, name: "Hoàng Nguyễn", number: 68, position: "HLV" },
+  { stt: 2, name: "Hoàng Nguyễn", number: 68, position: "HLV trưởng", squad: "san11" },
   { stt: 3, name: "Đỗ Đạt", number: 4, position: "Trợ lý HLV", squad: "san11" },
   { stt: 4, name: "Hoàng Trung", number: 1, position: "GK", squad: "san11" },
   { stt: 5, name: "Quốc Hưng", number: 43, position: "GK", squad: "san11" },
