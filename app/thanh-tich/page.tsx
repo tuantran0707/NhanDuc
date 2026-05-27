@@ -1,4 +1,5 @@
 import { achievements } from "@/lib/content";
+import LightboxImage from "@/components/LightboxImage";
 
 export const metadata = { title: "Thành Tích - Nhân Đức FC" };
 
@@ -21,11 +22,39 @@ export default function AchievementsPage() {
               <span className="absolute -left-3.5 flex items-center justify-center w-7 h-7 bg-brand-gold rounded-full ring-4 ring-white text-brand-dark font-black text-xs">
                 {a.year.slice(-2)}
               </span>
-              <div className="card p-5">
-                <div className="text-xs text-brand font-semibold">{a.year}</div>
-                <h3 className="font-bold text-lg mt-1">{a.title}</h3>
-                {a.detail && <p className="text-gray-600 mt-1 text-sm">{a.detail}</p>}
-              </div>
+              <details className="card group overflow-hidden">
+                <summary className="list-none p-5 flex flex-col md:flex-row gap-5 items-center w-full text-left hover:shadow-lg transition cursor-pointer">
+                  {a.cover && (
+                    <span className="block flex-shrink-0">
+                      <img
+                        src={a.cover}
+                        alt={a.title}
+                        className="w-28 h-20 object-cover rounded shadow border border-gray-200 hover:scale-105 transition"
+                        loading="lazy"
+                      />
+                    </span>
+                  )}
+                  <div>
+                    <div className="text-xs text-brand font-semibold">{a.year}</div>
+                    <h3 className="font-bold text-lg mt-1">{a.title}</h3>
+                    {a.detail && <p className="text-gray-600 mt-1 text-sm">{a.detail}</p>}
+                    <div className="mt-2 text-xs text-brand-gold font-semibold underline">Nhấn để xem tất cả ảnh</div>
+                  </div>
+                </summary>
+                {a.images && (
+                  <div className="px-5 pb-5 grid gap-3 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+                    {a.images.map((img, idx) => (
+                      <LightboxImage
+                        key={img}
+                        src={img}
+                        alt={a.title + " ảnh " + (idx + 1)}
+                        thumbWrapperClassName="h-32 rounded shadow border border-gray-200"
+                        thumbImageClassName="object-cover hover:scale-105 transition"
+                      />
+                    ))}
+                  </div>
+                )}
+              </details>
             </li>
           ))}
         </ol>

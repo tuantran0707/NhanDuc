@@ -9,45 +9,43 @@ export type Player = {
 
 // Dữ liệu cầu thủ Nhân Đức FC (do CLB cung cấp)
 export const players: Player[] = [
-  { stt: 1, name: "Văn Nhân", number: 8, size: "L", dob: "25-11", position: "Bầu" },
-  { stt: 2, name: "Đỗ Đạt", number: 4, size: "XL", position: "HLV" },
-  { stt: 3, name: "Đinh Thiên", number: 10, size: "M", position: "GK" },
-  { stt: 4, name: "Quốc Hưng (GK)", number: 43, size: "L", position: "GK" },
-  { stt: 5, name: "Hoàng Trung (GK)", number: 1, size: "L", position: "GK" },
-  { stt: 6, name: "Tuấn Vũ (HLV)", number: 9, size: "M", position: "HLV" },
-  { stt: 7, name: "Nguyễn Sỹ", number: 19, size: "M" },
-  { stt: 8, name: "Trần Lĩnh", number: 17, size: "M" },
-  { stt: 9, name: "Lâm Viên", number: 47, size: "M" },
-  { stt: 10, name: "Huỳnh Phong", number: 78, size: "L" },
-  { stt: 11, name: "Võ Lực", number: 74, size: "S" },
-  { stt: 12, name: "Phi Thông", number: 29, size: "L" },
-  { stt: 13, name: "Tôn Định", number: 14, size: "L" },
-  { stt: 14, name: "Trần Dũng", number: 2, size: "M" },
-  { stt: 15, name: "Phước Classic", number: 7, size: "M" },
-  { stt: 16, name: "Trương Vinh", number: 22, size: "L" },
-  { stt: 17, name: "Nguyễn Bảo (GK)", number: 26, size: "M", position: "GK" },
-  { stt: 18, name: "Viết Thành", number: 15, size: "L" },
-  { stt: 19, name: "Hữu Phước", number: 12, size: "L" },
-  { stt: 20, name: "Tấn Hòa", number: 6, size: "L" },
-  { stt: 21, name: "Đức Nhật", number: 18, size: "L" },
-  { stt: 22, name: "Văn An", number: 99, size: "L" },
-  { stt: 23, name: "Hữu Thức", number: 16, size: "M" },
-  { stt: 24, name: "Trần Tín", number: 21, size: "S" },
-  { stt: 25, name: "Nguyên Phú", number: 20, size: "M" },
-  { stt: 26, name: "Xuân Mạnh", number: 92, size: "M" },
-  { stt: 27, name: "Ngọc Huỳnh", number: 11, size: "L" },
-  { stt: 28, name: "Phúc Khang (GK)", number: 61, size: "L", position: "GK" },
-  { stt: 29, name: "Văn Hà", number: 5, size: "L" },
-  { stt: 30, name: "Trần Vũ", number: 32, size: "L" },
-  { stt: 31, name: "Ngọc Huy (GK)", number: 35, size: "L", position: "GK" },
-  { stt: 32, name: "Minh Giàu", number: 36, size: "M" },
-  { stt: 33, name: "Phạm Hát", number: 52, size: "XL" },
-  { stt: 34, name: "Duy Tuấn", number: 77, size: "L", dob: "13/05/1999", position: "Tiền vệ cánh" },
-  { stt: 35, name: "Bá Trung", number: 55, size: "L" },
-  { stt: 36, name: "Công Huy", number: 34, size: "M" },
-  { stt: 37, name: "Hải Nam", number: 39, size: "M" },
-  { stt: 38, name: "Võ Thùy", number: 70, size: "L" },
-  { stt: 39, name: "Anh Tuấn", number: 83, size: "L" }
+  { stt: 1, name: "Văn Nhân", number: 8, position: "Trưởng đoàn" },
+  { stt: 2, name: "Hoàng Nguyễn", number: 68, position: "HLV" },
+  { stt: 3, name: "Đỗ Đạt", number: 4, position: "Trợ lý HLV" },
+  { stt: 4, name: "Hoàng Trung", number: 1, position: "GK" },
+  { stt: 5, name: "Quốc Hưng", number: 43, position: "GK" },
+  { stt: 6, name: "Ngọc Huy", number: 35, position: "GK" },
+  { stt: 7, name: "Văn Hà", number: 5, position: "Defenders" },
+  { stt: 8, name: "Vinh Trương (Vinh Dybala)", number: 22, position: "Midfielders" },
+  { stt: 9, name: "Thành Hiếu", number: 37, position: "Midfielders" },
+  { stt: 10, name: "Đức Mạnh", number: 27, position: "Midfielders" },
+  { stt: 11, name: "Phi Thông (Thông Muller)", number: 29, position: "Forwards" },
+  { stt: 12, name: "Tony Trần", number: 96, position: "Forwards" },
+  { stt: 13, name: "Phú Nguyên (Phú Pepe)", number: 20, position: "Defenders" },
+  { stt: 14, name: "Sỹ Nguyễn", number: 19, position: "Midfielders" },
+  { stt: 15, name: "Xuân Mạnh (Mạnh Ka78)", number: 92, position: "Midfielders" },
+  { stt: 16, name: "Lâm Viên", number: 47, position: "Midfielders" },
+  { stt: 17, name: "Trần Tín", number: 21, position: "Defenders" },
+  { stt: 18, name: "Dũng Trần", number: 2, position: "Defenders" },
+  { stt: 19, name: "Quốc Vương", number: 31, position: "Forwards" },
+  { stt: 20, name: "Huỳnh Phong", number: 78, position: "Defenders" },
+  { stt: 21, name: "Võ Lực", number: 74, position: "Defenders" },
+  { stt: 22, name: "Viết Thành", number: 15, position: "Defenders" },
+  { stt: 23, name: "Duy Tuấn", number: 77, position: "Forwards" },
+  { stt: 24, name: "Bá Trung", number: 55, position: "Forwards" },
+  { stt: 25, name: "Đinh Thiên", number: 10, position: "Forwards" },
+  { stt: 26, name: "Hữu Thức", number: 16, position: "Midfielders" },
+  { stt: 27, name: "Tấn Phước (Phước Classic)", number: 7, position: "Forwards" },
+  { stt: 28, name: "Hữu Phước", number: 12, position: "Midfielders" },
+  { stt: 29, name: "Anthony", number: 99, position: "Forwards" },
+  { stt: 30, name: "Hát Phạm", number: 52, position: "Midfielders" },
+  { stt: 31, name: "Ngọc Huỳnh", number: 11, position: "Midfielders" },
+  { stt: 32, name: "Quốc Khánh", number: 28, position: "Forwards" },
+  { stt: 33, name: "Quốc Núi", number: 23, position: "Midfielders" },
+  { stt: 34, name: "Thanh Hùng", number: 26, position: "Midfielders" },
+  { stt: 35, name: "Minh Tân", number: 57, position: "Defenders" },
+  { stt: 36, name: "Tuấn Phát", number: 14, position: "Midfielders" },
+  { stt: 37, name: "Hoài Bảo", number: 39, position: "Midfielders" }
 ];
 
 export const positionGroups = [
@@ -63,11 +61,11 @@ export const positionGroups = [
 export function groupKey(p: Player): string {
   if (!p.position) return "?";
   const pos = p.position.toLowerCase();
-  if (pos.includes("bầu")) return "Bầu";
+  if (pos.includes("bầu") || pos.includes("trưởng đoàn")) return "Bầu";
   if (pos.includes("hlv")) return "HLV";
   if (pos.includes("gk") || pos.includes("thủ môn")) return "GK";
-  if (pos.includes("hậu vệ") || pos.includes("trung vệ")) return "DF";
-  if (pos.includes("tiền vệ")) return "MF";
-  if (pos.includes("tiền đạo")) return "FW";
+  if (pos.includes("hậu vệ") || pos.includes("trung vệ") || pos.includes("defender")) return "DF";
+  if (pos.includes("tiền vệ") || pos.includes("midfielder")) return "MF";
+  if (pos.includes("tiền đạo") || pos.includes("forward")) return "FW";
   return "?";
 }

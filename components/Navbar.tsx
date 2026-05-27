@@ -7,6 +7,7 @@ import { useState } from "react";
 
 const links = [
   { href: "/", label: "Trang Chủ" },
+  { href: "/tin-tuc", label: "Tin Tức & Blog" },
   { href: "/cau-thu", label: "Cầu Thủ" },
   { href: "/thanh-tich", label: "Thành Tích" },
   { href: "/ket-qua", label: "Kết Quả Thi Đấu" },
@@ -36,7 +37,7 @@ export default function Navbar() {
 
         <nav className="hidden md:flex items-center gap-1">
           {links.map((l) => {
-            const active = pathname === l.href;
+            const active = l.href === "/" ? pathname === "/" : pathname.startsWith(l.href);
             return (
               <Link
                 key={l.href}
