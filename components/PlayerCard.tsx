@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { playerProfiles } from "@/lib/playerProfiles";
+import { playerProfiles, playerPosters } from "@/lib/playerProfiles";
 import PlayerProfile from "@/components/PlayerProfile";
 
 export default function PlayerCard({ p, photo }: { p: any; photo?: string }) {
@@ -65,6 +65,7 @@ export default function PlayerCard({ p, photo }: { p: any; photo?: string }) {
               position={p.position}
               photo={photo}
               profile={playerProfiles[p.number]}
+              poster={playerPosters[p.number]}
             />
             <button
               className="absolute top-2 right-2 bg-gray-200 hover:bg-gray-300 rounded-full w-8 h-8 flex items-center justify-center text-xl font-bold text-gray-600 shadow"
