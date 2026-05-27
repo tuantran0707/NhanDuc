@@ -1,4 +1,4 @@
-import { players } from "@/lib/players";
+import { players, positionGroups, groupKey } from "@/lib/players";
 import { readdir } from "fs/promises";
 import path from "path";
 import PlayerCard from "@/components/PlayerCard";
@@ -33,6 +33,13 @@ export default async function San11Page() {
   const san11 = players.filter(p => p.squad === "san11");
   const photoMap = await getPhotoMap(san11);
 
+  const groups = positionGroups
+    .map(g => ({
+      ...g,
+      list: san11.filter(p => groupKey(p) === g.key).sort((a, b) => a.number - b.number),
+    }))
+    .filter(g => g.list.length > 0);
+
   return (
     <>
       <section className="bg-brand text-white">
@@ -42,12 +49,19 @@ export default async function San11Page() {
           <p className="mt-1 text-white/80">Đội hình thi đấu sân 11 – {san11.length} thành viên</p>
         </div>
       </section>
-      <section className="container-page py-10">
-        <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {san11.map((p) => (
-            <PlayerCard key={p.stt} p={p} photo={photoMap[p.stt]} />
-          ))}
-        </div>
+      <section className="container-page py-10 space-y-12">
+        {groups.map(g => (
+          <div key={g.key}>
+            <h2 className="text-xl md:text-2xl font-bold mb-4">
+              {g.label} <span className="text-gray-400 font-normal">({g.list.length})</span>
+            </h2>
+            <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+              {g.list.map(p => (
+                <PlayerCard key={p.stt} p={p} photo={photoMap[p.stt]} />
+              ))}
+            </div>
+          </div>
+        ))}
       </section>
     </>
   );

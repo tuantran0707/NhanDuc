@@ -41,7 +41,20 @@ const s7NoiBoList: Player[] = [
   { stt: 35, name: "Hoài Bảo", number: 39 },
 ];
 
+const positionOrder = [
+  { key: "GK", label: "Thủ môn" },
+  { key: "other", label: "Cầu thủ" },
+];
+
 export default function S7NoiBoPage() {
+  const gkList = s7NoiBoList.filter(p => p.position === "GK");
+  const otherList = s7NoiBoList.filter(p => p.position !== "GK");
+
+  const groups = [
+    { label: "Thủ môn", list: gkList },
+    { label: "Cầu thủ", list: otherList },
+  ].filter(g => g.list.length > 0);
+
   return (
     <>
       <section className="bg-brand text-white">
@@ -51,29 +64,34 @@ export default function S7NoiBoPage() {
           <p className="mt-1 text-white/80">Đội hình nội bộ sân 7 – {s7NoiBoList.length} thành viên</p>
         </div>
       </section>
-      <section className="container-page py-10">
-      <div className="overflow-x-auto">
-        <table className="min-w-full text-sm border border-gray-200 rounded-lg">
-          <thead className="bg-gray-50 text-gray-600 uppercase text-xs">
-            <tr>
-              <th className="px-4 py-3 text-left">STT</th>
-              <th className="px-4 py-3 text-left">Tên</th>
-              <th className="px-4 py-3 text-left">Số áo</th>
-              <th className="px-4 py-3 text-left">Vị trí</th>
-            </tr>
-          </thead>
-          <tbody>
-            {s7NoiBoList.map((p) => (
-              <tr key={p.stt} className="border-t border-gray-100 hover:bg-gray-50">
-                <td className="px-4 py-2">{p.stt}</td>
-                <td className="px-4 py-2 font-medium">{p.name}</td>
-                <td className="px-4 py-2">{p.number > 0 ? p.number : "-"}</td>
-                <td className="px-4 py-2">{p.position || "-"}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+      <section className="container-page py-10 space-y-10">
+        {groups.map(g => (
+          <div key={g.label}>
+            <h2 className="text-xl md:text-2xl font-bold mb-4">
+              {g.label} <span className="text-gray-400 font-normal">({g.list.length})</span>
+            </h2>
+            <div className="overflow-x-auto">
+              <table className="min-w-full text-sm border border-gray-200 rounded-lg">
+                <thead className="bg-gray-50 text-gray-600 uppercase text-xs">
+                  <tr>
+                    <th className="px-4 py-3 text-left">STT</th>
+                    <th className="px-4 py-3 text-left">Tên</th>
+                    <th className="px-4 py-3 text-left">Số áo</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {g.list.map((p) => (
+                    <tr key={p.stt} className="border-t border-gray-100 hover:bg-gray-50">
+                      <td className="px-4 py-2">{p.stt}</td>
+                      <td className="px-4 py-2 font-medium">{p.name}</td>
+                      <td className="px-4 py-2">{p.number > 0 ? p.number : "-"}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        ))}
       </section>
     </>
   );
